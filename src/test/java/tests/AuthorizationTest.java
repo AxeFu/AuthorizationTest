@@ -107,7 +107,7 @@ public class AuthorizationTest extends BaseTest {
     }
 
     @Test
-    public void keyboardNavigationTest() {
+    public void keyboardNavigationLoginTest() {
         LoginPage page = new LoginPage(driver);
         page.open(path);
 
@@ -122,5 +122,15 @@ public class AuthorizationTest extends BaseTest {
         } catch (TimeoutException ignore) {}
 
         Assert.assertFalse(alertWasShown);
+    }
+
+    @Test
+    public void keyboardNavigationRemindPasswordTest() {
+        RemindPasswordPage page = new LoginPage(driver, path).remindPassword();
+        page.sendKeys(Keys.TAB, Keys.TAB)
+                .sendKeys(WordBuilder.getRandomWord(8))
+                .sendKeys(Keys.ENTER);
+
+        Assert.assertTrue(page.isAlert());
     }
 }
