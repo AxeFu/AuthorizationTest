@@ -111,9 +111,10 @@ public class AuthorizationTest extends BaseTest {
         LoginPage page = new LoginPage(driver);
         page.open(path);
 
-        page.sendKeys(Keys.TAB, Keys.ENTER);
+        page.waitElementIsVisible(page.getLogoLinkElement());
 
-        page.sendKeys(Keys.TAB, Keys.TAB, trueLogin, Keys.TAB, truePassword, Keys.ENTER);
+        page.sendKeys(Keys.TAB, Keys.TAB, trueLogin)
+                .sendKeys(Keys.TAB, truePassword, Keys.ENTER);
 
         boolean alertWasShown = false;
         try {
