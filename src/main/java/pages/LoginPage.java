@@ -8,12 +8,12 @@ import pages.base.Page;
 
 public class LoginPage extends Page {
 
-    private final By logoLink = By.xpath("//img[contains(@src,'Logo')]/parent::a");
-    private final By loginInput = By.cssSelector("input[name='user']");
-    private final By passwordInput = By.cssSelector("input[name='password']");
-    private final By showPasswordButton = By.cssSelector("button[id='show_password']");
-    private final By enterButton = By.cssSelector("button[id='button_submit_login_form']");
-    private final By remindPasswordLink = By.cssSelector("table.links-container a.mira-default-login-page-link");
+    private static final By logoLink = By.xpath("//img[contains(@src,'Logo')]/parent::a");
+    private static final By loginInput = By.cssSelector("input[name='user']");
+    private static final By passwordInput = By.cssSelector("input[name='password']");
+    private static final By showPasswordButton = By.cssSelector("button[id='show_password']");
+    private static final By enterButton = By.cssSelector("button[id='button_submit_login_form']");
+    private static final By remindPasswordLink = By.cssSelector("table.links-container a.mira-default-login-page-link");
 
     public LoginPage(WebDriver driver) {
         super(driver);

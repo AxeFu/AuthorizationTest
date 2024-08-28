@@ -33,6 +33,7 @@ public class Page {
     public WebElement getVisibleWebElement(By selector) {
         return waitElementIsVisible(driver.findElement(selector));
     }
+
     public WebElement waitElementIsVisible(WebElement element) {
         new WebDriverWait(driver, Config.EXPLICIT_WAIT).until(ExpectedConditions.visibilityOf(element));
         return element;

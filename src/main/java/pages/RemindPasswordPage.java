@@ -7,12 +7,12 @@ import pages.base.Page;
 
 public class RemindPasswordPage extends Page {
 
-    private final By logoLink = By.xpath("//img[contains(@src,'Logo')]/parent::a");
-    private final By loginOrNameInput = By.cssSelector("input[name='loginOrEmail']");
-    private final By beforeLink = By.cssSelector("a.mira-page-forgot-password-link");
-    private final By sendLoginOrMailButton = By.cssSelector("button.mira-page-forgot-password-button");
-    private final By successDiv = By.cssSelector("div.success");
-    private final By alertDiv = By.cssSelector("div.alert");
+    private static final By logoLink = By.xpath("//img[contains(@src,'Logo')]/parent::a");
+    private static final By loginOrNameInput = By.cssSelector("input[name='loginOrEmail']");
+    private static final By beforeLink = By.cssSelector("a.mira-page-forgot-password-link");
+    private static final By sendLoginOrMailButton = By.cssSelector("button.mira-page-forgot-password-button");
+    private static final By successDiv = By.cssSelector("div.success");
+    private static final By alertDiv = By.cssSelector("div.alert");
     public RemindPasswordPage(WebDriver driver) {
         super(driver);
     }
